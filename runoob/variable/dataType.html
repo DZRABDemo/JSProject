@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>数据类型</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            var info = 10;
+            var info = "string";
+            var info = null;
+            console.log(info);
+        }
+
+        function funArray() {
+            var num = [1, 2, 3, 4];
+            for (let i = 0; i < num.length; i++) {
+                console.log(num[i]);
+            }
+        }
+
+        function funObject() {
+            var person = {
+                firstname: "John",
+                lastname: "Doe",
+                id: 5566
+            };
+            console.log(person.firstname);
+        }
+        //fun1();
+        //funArray();
+        //funObject();
+
+
+        function Student() {
+            this.name = "xufeifan";
+            this.age = 20;
+            this.score = 100;
+        }
+
+        var student = new Student();
+        var name = student.name;
+        console.log(name);
+        var name = student["name"];
+        console.log(name);
+
+        Student.prototype.newInfo = "newInfo";
+        var info = student.newInfo;
+        console.log(info);
+    </script>
+
+</body>
+
+</html>

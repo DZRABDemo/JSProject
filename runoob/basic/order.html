@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>order</title>
+    <meta charset="utf-8">
+    <script>
+        console.log(window);
+        console.log(document);
+        window.onload = function fun() {
+            var divOb1 = document.getElementById("div");
+            divOb1.onclick = function fun1() {
+                alert("点击");
+            }
+        }
+
+
+    </script>
+</head>
+
+<body>
+    <script>
+        var divOb2 = document.getElementById("div");
+        divOb2.onclick = function fun2() {
+            alert("点击");
+        }
+        //仅仅这里报错了
+    </script>
+    <!-- body -->
+    <div id="div" style="height: 400px; width: 500px; background-color: red;">
+
+    </div>
+    <script>
+        var divOb3 = document.getElementById("div");
+        divOb3.onclick = function fun3() {
+            alert("点击");
+        }
+    </script>
+
+</body>
+
+</html>

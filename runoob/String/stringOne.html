@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试字符串</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            var str1 = "javascript";
+            var str2 = new String("javascript");
+
+            console.log(typeof str1);
+            console.log(typeof str2);
+        }
+
+        //fun1();
+
+        function fun2() {
+            var str1 = "javascript";
+            console.log(str1.length);
+
+            var conStr = str1.constructor;
+            console.log(conStr);
+
+            String.prototype.info = "info";
+            console.log(str1.info);
+        }
+
+        //fun2();
+
+
+        function strMethod1() {
+            var str1 = "javascript";
+
+            console.log(str1.charAt(0));
+            console.log(str1.charCodeAt(0));
+
+            console.log(str1.indexOf('a'));
+            console.log(str1.lastIndexOf('a'));
+
+            var str2 = "java";
+            var str3 = "script";
+
+            var str4 = str2.concat(str3);
+            console.log(str4);
+
+            var str5 = str1.substr(1, 4);
+            var str6 = str1.substring(1, 4);
+            console.log(str5);
+            console.log(str6);
+        }
+
+        //strMethod1();
+
+        function strMethod2() {
+            var str = new String("javascript");
+            console.log(typeof str);
+
+            var str1 = str.toString();
+            console.log(typeof str1);
+
+            var str2 = str.valueOf()
+            console.log(typeof str2);
+        }
+        strMethod2();
+    </script>
+</body>
+
+</html>

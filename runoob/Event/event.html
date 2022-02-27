@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试事件</title>
+    <meta charset="utf-8">
+    <script>
+        window.onload = function fun() {
+            var divOb = document.getElementById("div");
+            var textOb = document.getElementById("textarea");
+
+            divOb.onclick = function fun1() {
+                console.log("单击");
+            }
+
+            divOb.ondblclick = function fun2() {
+                console.log("双击");
+            }
+
+            divOb.onmousemove = function mouseMove() {
+                console.log("鼠标移动");
+            }
+
+            textOb.onkeydown = function keyDown(e) {
+                var codeInfo = e.keyCode;
+                console.log(codeInfo);
+            }
+
+            textOb.onselect = function mySelect() {
+                console.log("选定");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+    <div id="div" style="background-color: aqua;width: 500px;height: 500px;">
+
+    </div>
+
+    <textarea id="textarea"></textarea>
+
+</body>
+
+</html>
