@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试throw</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <input id="info" type="text" value="输出大于等于10" />
+    <button onclick="throwInfo()">提交</button><br />
+    <span id="span"></span>
+
+    <script>
+        function throwInfo() {
+            var message;
+            try {
+                var value = document.getElementById("info").value;
+                if (value < 10) throw "不正确";
+            } catch (err) {
+                message = err;
+            } finally {
+                document.getElementById("span").innerHTML = message;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

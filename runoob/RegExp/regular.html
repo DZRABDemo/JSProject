@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>测试正则表达式</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <span id="span">visit info</span><br />
+    <button id="btn" onclick="funReplace()">点击</button>
+    <script>
+        function funTest() {
+            var regExp = new RegExp("e");
+            var flag = regExp.test("The best things in life are free!");
+            console.log(flag);
+        }
+        funTest();
+
+        function funSearch() {
+            var str = "Visit Runoob!";
+            var n = str.search(/Runoob/i);
+            console.log(n);
+        }
+
+        //funSearch();
+
+        function funReplace() {
+            var reObject = document.getElementById("span").innerHTML;
+            var regExp = new RegExp("info");
+            var newInfo = reObject.replace(regExp, "newInfo");
+            document.getElementById("span").innerHTML = newInfo;
+
+        }
+    </script>
+
+</body>
+
+</html>
