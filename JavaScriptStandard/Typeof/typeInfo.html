@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>typeinfo</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        function fun1() {
+            var message;
+            alert(message == undefined);
+        }
+
+        //fun1(); true
+
+        function fun2() {
+            var message;
+            //var age;
+
+            alert(message);
+            //alert(age); this variable is undefined
+        }
+
+        //fun2();
+
+        function fun3() {
+            var num1 = null;
+            var num2 = undefined;
+            console.log(num1 === num2);
+
+            var num3 = '1';
+            var num4 = 1;
+            console.log(num3 === num4);
+        }
+
+        //fun3();
+
+
+        function fun4() {
+            var num = window.parseInt("10", 2);
+            console.log(num);
+        }
+
+        //fun4();
+
+
+        function fun5() {
+            var num = false;
+            var flag = window.isNaN(undefined);
+            console.log(flag);
+        }
+
+        fun5();
+    </script>
+</body>
+
+</html>

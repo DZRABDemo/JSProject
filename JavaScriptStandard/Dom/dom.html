@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dom</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+
+    <div id="div">
+        <div id="div1">
+            div1
+        </div>
+        <div id="div2">
+            div2
+        </div>
+    </div>
+
+    <script>
+
+        function funDom() {
+            console.log(document);
+
+            //var documentObj = JSON.stringify(document);
+            //document.write(documentObj);
+        }
+
+        function funDiv() {
+            var div1 = document.getElementById("div1");
+
+        }
+
+    </script>
+    <button id="btn" onclick="funDom()">Dom</button>
+</body>
+
+</html>

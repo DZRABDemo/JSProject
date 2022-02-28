@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<!-- 1.script放在head和body有什么区别?
+    1.页面在遇到body开始显示显示内容
+    这也就意味着放在head中的内容必须加载所有JS
+    才能开始显示页面 -->
+
+<!-- 2.defer的作用？
+    让页面延迟加载 可以解决问题
+     -->
+
+<head>
+    <title>script</title>
+    <meta charset="utf-8">
+    <script src="JS/two.js" defer="defer"></script>
+</head>
+
+<body>
+    <script src="JS/one.js" type="text/javascript"></script>
+
+
+    <button onclick="funOne()">点击</button>
+</body>
+
+</html>

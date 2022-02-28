@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>解析</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <script>
+        var text = '{ "sites" : [' +
+            '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+            '{ "name":"Google" , "url":"www.google.com" },' +
+            '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+        document.write(text);
+        var obj = JSON.parse(text);
+        document.write(obj.sites[0].name);
+    </script>
+</body>
+
+</html>

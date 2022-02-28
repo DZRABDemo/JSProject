@@ -1,0 +1,3 @@
+function funOne() {
+    alert("funOne");
+}

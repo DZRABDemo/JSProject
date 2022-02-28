@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Json</title>
+    <meta charset="utf-8">
+</head>
+
+<body>
+    <span id="span"></span>
+    <button id="btn" onclick="urlSwitch()">切换网址</button>
+    <script>
+        var text = '{ "sites" : [' +
+            '{ "name":"Runoob" , "url":"www.runoob.com" },' +
+            '{ "name":"Google" , "url":"www.google.com" },' +
+            '{ "name":"Taobao" , "url":"www.taobao.com" } ]}';
+        var obj = JSON.parse(text);
+        var sum = 0;
+
+        function urlSwitch() {
+            var spanObj = document.getElementById("span");
+            var switchSum = (sum) % 3;
+            sum++;
+            spanObj.innerHTML = obj.sites[switchSum].name + ":"
+                + obj.sites[switchSum].url;
+
+        }
+    </script>
+
+</body>
+
+</html>
