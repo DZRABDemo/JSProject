@@ -4,9 +4,46 @@
 <head>
     <title>节点解析</title>
 </head>
+<!-- 节点类型主要分为元素节点、属性节点和文本节点 -->
 
 <body>
+    <table border="1px">
+        <tr>
+            <td id="john" name="myname">John</td>
+            <td>Doe</td>
+            <td id="jack">Jack</td>
+        </tr>
+    </table>
 
+    <script>
+        function funElementNode() {
+            var obj = document.getElementById("john");
+            console.log(obj.nodeType);
+            console.log(obj.nodeName);
+            console.log(obj.nodeValue);
+            //1 td null
+        }
+
+        function funAttribute() {
+            var obj = document.getElementById("john").getAttributeNode("name");
+            console.log(obj.nodeType);
+            console.log(obj.nodeName);
+            console.log(obj.nodeValue);
+        }
+
+        function funTextNode() {
+
+            var obj = document.getElementsByTagName("td")[0].firstChild;
+            console.log(obj.nodeType);
+            console.log(obj.nodeName);
+            console.log(obj.nodeValue);
+
+        }
+    </script>
+
+    <button id="btn1" onclick="funElementNode()">点击</button>
+    <button id="btn2" onclick="funAttribute()">点击</button>
+    <button id="btn3" onclick="funTextNode()">点击</button>
 </body>
 
 </html>
